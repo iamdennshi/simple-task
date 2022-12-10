@@ -1,7 +1,4 @@
-/* Selector - select the HTML elements you want to style */
-/* root - matches the document's html element (for creating variables)*/
 :root {
-    /* Variables */
     --dark: #374151;
     --darker: #1f2937;
     --darkest: #111827;
@@ -10,49 +7,40 @@
     --blue: #489fec;
     --purple: #8B5cf6;
 }
-/* Select all elements */
+
 * {
     box-sizing: border-box;
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* background-image: url(https://sun9-46.userapi.com/impg/W4SrMnVqYXMaaOGvI5GPY9hKtG-XBtHxR5DAWA/qKtjKth9P0k.jpg?size=979x537&quality=96&sign=b831567648c4abc2354fa71ffdcdb7b7&type=album); */
     background: var(--dark);
 }
+
 header {
     padding: 2rem 1rem;
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
 }
-/* header h1 {
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--gray);
-    margin-bottom: 1rem;
-} */
 
-/* Selector #id can only be used once, .class - many. 
-Selector #id has a higher priority than .class */
 #new-task-form {
     display: flex;
 }
+
 input, button {
     appearance: none;
     border: none;
     outline: none;
     background: none;
 }
-#new-task-input {
-    /* Stretch over the entire block gives the same effect */
-    /* flex: 1 1 0%; */
-    /* flex-grow: 1; */
-    flex-basis: 100%;
 
+#new-task-input {
+    flex-basis: 100%;
     background-color: var(--darker);
     padding: 1rem;
     border-radius: 1rem;
@@ -60,36 +48,33 @@ input, button {
     color: var(--light);
     font-size: 1.25rem;
 }
+
 #new-task-input::placeholder {
     color: var(--gray);
 }
+
 #new-task-submit {
     color: var(--blue);
     font-size: 2rem;
-    /* Prefix used for specific browsers
-    -webkit  (Chrome, Safari, Opera) */
     cursor: pointer;
 }
+
 #new-task-submit:hover {
    opacity: 0.8;
 }
+
 #new-task-submit:active {
     opacity: 0.6;
 }
+
 main {
-    /* Stretch over the entire block gives the same effect */
-    /* flex: 1 1 0%; */
-    /* flex-grow: 1; */
     flex-basis: 100%;
-    
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
 }
-/* (.) before classes */
-/* .<content> - applies to any tags */
-/* div.content -  aplies only to div with class .content */
- .task-list {
+
+.task-list {
     padding: 1rem;
 
  }
@@ -139,12 +124,15 @@ main {
     text-transform: uppercase;
     transition: 0.4s;
 }
+
 .task .actions button:hover {
     opacity: 0.8;
  }
+
  .task .actions button:active {
      opacity: 0.6;
  }
+
  .task .actions .edit {
     color: var(--blue);
  }
